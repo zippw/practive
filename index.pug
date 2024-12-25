@@ -1,0 +1,197 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/dist/style.min.css")
+        title LA Fitness
+    body
+        header
+            .wrapper
+                .navbar
+                    include ./logo.svg
+                    button.main#hamburger
+                        span
+                        span
+                        span
+                .hero
+                    h1 Достигаем фитнес-целей ВМЕСТЕ!
+                    p Добро пожаловать в LA Fitness — клуб, где каждый найдет свой путь к идеальной форме и здоровью
+                    button.main Записаться
+                .menu
+                    ul
+                        li
+                            span Главная
+                            include ./arrow-right.svg
+                        li
+                            span Преимущества
+                            include ./arrow-right.svg
+                        li
+                            span Фото залов
+                            include ./arrow-right.svg
+                        li
+                            span Отзывы
+                            include ./arrow-right.svg
+                        li
+                            span Тарифы
+                            include ./arrow-right.svg
+                        li
+                            span Расположение
+                            include ./arrow-right.svg
+
+                    .socials
+                        include ./mdi_twitter.svg
+                        include ./mdi_instagram.svg
+
+            img.background(src="/gym.jpg" alt="")
+        main
+            section.preeminence
+                h2 Преимущества
+                .wrapper
+                    .left
+                        .row
+                            .col
+                                h1 4
+                                span Зала
+                            .col
+                                h1 32
+                                span Тренера
+                            .col
+                                h1 3
+                                span Тарифа
+                        .row
+                            .col
+                                h1 21
+                                span Программа
+                            .col.purple
+                                h1 10,2K
+                                span Посетителей в год
+                    .right
+                        each el in Array(3)
+                            .row
+                                h1 Современное оборудование
+                                p Только передовые тренажеры и инструменты, регулярно обновляемые для безопасных и эффективных тренировокs
+            section.photos 
+                h2 Фото залов
+                .photos_wrapper
+                    .row
+                        .preview
+                            img(src="/photo.jpg" alt="")
+                        .next
+                            .overlay
+                            img(src="/photo.jpg" alt="")
+                            button.main
+                                include ./arrow-right.svg
+                    .slider
+                        each el, i in Array(4)
+                            .card(class=(i === 0 ? "active" : null))
+                                img(src="/photo.jpg" alt="")
+            section.reviews
+                h2 Отзывы
+                .row
+                    .col
+                        p “Супер место с дружелюбной атмосферой! Программа тренировок полностью подстраивается под мои цели. Результаты видны уже через месяц.”
+                        .bottom
+                            .author – Анна К., 28 лет
+                            .stars
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg
+                    .col
+                        p “Тренеры настоящие профи. Подход индивидуальный, всегда помогают и подбадривают. Теперь я не пропускаю ни одной тренировки.”
+                        .bottom
+                            .author – Максим П., 32 года
+                            .stars
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg  
+                                include ./empty_star.svg
+                    .col
+                        p “Оборудование на высшем уровне, много групповых классов. Я обожаю занятия по йоге здесь — это просто перезагрузка!”
+                        .bottom
+                            .author – Екатерина Л., 26 лет
+                            .stars
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg
+                                include ./star.svg
+
+
+            section.pricelist
+                h2 Тарифы
+                .row
+                    .card
+                        .header
+                            .num #1
+                            .name Базовый
+                        .body
+                            h1 $30/месяц
+                            p Доступ к тренажерному залу#[br]с 8:00 до 22:00
+                    .card.popular
+                        .header
+                            .num #2
+                            .name Премиум
+                            img(src="/gigachad.png" alt="")
+                        .body
+                            h1 $50/месяц
+                            p Доступ к залу, групповым тренировкам и зонам отдыха
+                    .card
+                        .header
+                            .num #3
+                            .name VIP
+                        .body
+                            h1 $80/месяц
+                            p Полный доступ к услугам клуба, включая сауны и персональные тренировки
+                span.megapopular Самый популярный
+
+            section.location 
+                h2 Расположение
+                .row
+                    .left 
+                        img(src="/map.jpg" alt="")
+                        button.main Проложить маршрут
+                    .right
+                        .adress
+                            h1 LA Fitness удобно расположен в центре города:
+                            p Адрес: 123 Main St,#[br]Город, Страна
+                        .info Мы рядом с основными транспортными линиями и предлагаем удобную парковку для наших клиентов.
+
+            section.motivation 
+                h1 Готовы начать путь к здоровью и фитнесу? 
+                p Присоединяйтесь к LA Fitness и сделайте первый шаг уже сегодня!
+                button.light Записаться
+                img(src="/gym.jpg" alt="")
+
+            section.footer
+                .left
+                    include ./logo.svg
+                    dl.addres
+                        dt Наш телефон
+                        dd +7(999)-999-99-99
+                        dt Наш Адрес
+                        dd 123 Main St, Город, Страна
+                    span.copyright © Copyright. Все права защищены
+                .right
+                    ul.col
+                        li Главная
+                        li Преимущества
+                        li Фото зала
+                        li Отзывы
+                        li Тарифы
+                    ul.col
+                        li Связаться с нами
+                        li Мы в Telegram
+                        li Мы в Teams
+                        li Мы в Twitter
+                        li Мы в Instagram
+
+
+        .grid#figmagrid.show
+            each el in Array(12)
+                span
+
+        script(src="/index.js") 
