@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href="/dist/style.min.css")
+        link(rel="stylesheet" href="https://zippw.github.io/practive/dist/style.min.css")
         title LA Fitness
     body
         header
@@ -43,7 +43,7 @@ html(lang="en")
                         include ./mdi_twitter.svg
                         include ./mdi_instagram.svg
 
-            img.background(src="/gym.jpg" alt="")
+            img.background(src="https://zippw.github.io/practive/gym.jpg" alt="")
         main
             section.preeminence
                 h2 Преимущества
@@ -76,16 +76,16 @@ html(lang="en")
                 .photos_wrapper
                     .row
                         .preview
-                            img(src="/photo.jpg" alt="")
+                            img(src="https://zippw.github.io/practive/photo.jpg" alt="")
                         .next
                             .overlay
-                            img(src="/photo.jpg" alt="")
+                            img(src="https://zippw.github.io/practive/photo.jpg" alt="")
                             button.main
                                 include ./arrow-right.svg
                     .slider
                         each el, i in Array(4)
                             .card(class=(i === 0 ? "active" : null))
-                                img(src="/photo.jpg" alt="")
+                                img(src="https://zippw.github.io/practive/photo.jpg" alt="")
             section.reviews
                 h2 Отзывы
                 .row
@@ -135,7 +135,7 @@ html(lang="en")
                         .header
                             .num #2
                             .name Премиум
-                            img(src="/gigachad.png" alt="")
+                            img(src="https://zippw.github.io/practive/gigachad.png" alt="")
                         .body
                             h1 $50/месяц
                             p Доступ к залу, групповым тренировкам и зонам отдыха
@@ -152,7 +152,7 @@ html(lang="en")
                 h2 Расположение
                 .row
                     .left 
-                        img(src="/map.jpg" alt="")
+                        img(src="https://zippw.github.io/practive/map.jpg" alt="")
                         button.main Проложить маршрут
                     .right
                         .adress
@@ -164,7 +164,7 @@ html(lang="en")
                 h1 Готовы начать путь к здоровью и фитнесу? 
                 p Присоединяйтесь к LA Fitness и сделайте первый шаг уже сегодня!
                 button.light Записаться
-                img(src="/gym.jpg" alt="")
+                img(src="https://zippw.github.io/practive/gym.jpg" alt="")
 
             section.footer
                 .left
@@ -194,4 +194,4 @@ html(lang="en")
             each el in Array(12)
                 span
 
-        script(src="/index.js") 
+        script(src="https://zippw.github.io/practive/index.js") 
